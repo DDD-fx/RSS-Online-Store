@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+
+.search-reset {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__reset-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+

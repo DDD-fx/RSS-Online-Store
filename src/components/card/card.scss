@@ -1,0 +1,78 @@
+@import '../../styles/variables';
+@import "../../styles/mixins";
+
+.card {
+	border: 1px solid #9d8f00;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	height: 510px;
+	border-radius: 10px;
+
+	@media (max-width: 550px) {
+		height: auto;
+		width: 155px;
+	}
+
+	&__img-container {
+		height: 150px;
+		margin: 0 0 20px;
+
+		@media (max-width: 550px) {
+			height: 90px;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	&__title {
+		font: 500 18px/24px $font;
+		margin: 0 0 20px;
+	}
+
+	&__price {
+		font: 700 20px/20px $font;
+		margin: 0 0 20px;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 20px;
+
+		& li+li {
+			padding-top: 5px;
+		}
+	}
+
+	&__button {
+		@include buttons;
+		margin-top: auto;
+	}
+
+	&__counter {
+		justify-content: space-between;
+		align-items: center;
+		margin-top: auto;
+	}
+}
+
+.plus-btn,
+.minus-btn {
+	@include buttons;
+	width: 61px;
+
+	&[disabled] {
+		background: #919191;
+	}
+}
+
+.counter-num {
+	font-size: 20px;
+}
